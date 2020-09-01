@@ -11,9 +11,4 @@ import sys
 __all__ = []
 
 
-def panik(*_):
-    """De panik."""
-    print("panik", file=sys.stderr)
-
-
-sys.excepthook = panik
+sys.excepthook = lambda *_: print("panik", file=sys.stderr)
