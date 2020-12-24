@@ -6,9 +6,13 @@ Example:
     >>> import panik
     >>> sometim i paniks
 """
+import os
 import sys
 
 __all__ = []
 
 
-sys.excepthook = lambda *_: print("panik", file=sys.stderr)
+with open(os.path.join(os.path.dirname(__file__), "panikman.txt")) as f:
+    panik_img = "".join(f.readlines())
+
+sys.excepthook = lambda *_: print(panik_img, file=sys.stderr)

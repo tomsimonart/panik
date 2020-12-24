@@ -14,6 +14,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/tomsimonart/panik",
     packages=setuptools.find_packages(),
+    package_data={"panik": ["panikman.txt"]},
     classifiers=[
         "Programming Language :: Python :: 3",
         "Development Status :: 5 - Production/Stable",
